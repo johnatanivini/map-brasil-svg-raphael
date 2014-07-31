@@ -115,7 +115,8 @@
                     st[0].style.cursor = "pointer";
                     st[0].onmouseover = function () {
                         current && brasil[current].animate({fill: "#ccc", stroke: "#ebebeb"}, 500) && (document.getElementById(current).style.display = "");
-                        st.animate({fill: st.color, stroke: "#ccc"}, 500);
+                        st.animate({fill: st.color, stroke: "#ccc",scaleX:2,scaleY:2}, 500);
+						
                         st.toFront();
                         R.safari();
                         document.getElementById(state).style.display = "block";
@@ -126,7 +127,7 @@
                         st.toFront();
                         R.safari();
                     };
-                    if (state == "nsw") {
+                    if (state == "ce") {
                         st[0].onmouseover();
                     }
                 })(brasil[state], state);
